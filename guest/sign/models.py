@@ -13,9 +13,16 @@ class Event(Model):
 	def __str__(self):
 		return self.name
 
-class ClassName(object):
-	"""docstring for ClassName"""
-	def __init__(self, arg):
-		super(ClassName, self).__init__()
-		self.arg = arg
-		
+class Guest(Model):
+	event = models.ForeignKey(Event)
+	realname = models.CharField(max_length=64)
+	phone = models.CharField(max_length=16)
+	email = models.EmailField()
+	sign = models.BooleanField()
+	create_time = models.DateTimeField(auto_now=True)
+
+	class Meta:
+		unique_together = ("event","phone")
+
+	def __str__(self):
+		return self.realname
