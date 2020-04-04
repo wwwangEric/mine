@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django Page</title>
+	<link rel="stylesheet" href="../static/css/all.css">
+</head>
+<body>
+	<div class="index1">
+		<h1>这是第一个Django页面！</h1>
+		<h2>发布会管理</h2>
+	<div class="index2">
+		<form method="post" action="/login_action/">
+			<input type="text" name="username" 
+			placeholder="在此输入账号~"><br>
+			<input type="password" name="password" 
+			placeholder="在此输入密码~"><br>
+			<button id="btn" type="submit">点此登录</button>
+		{% csrf_token %}
+		</form>
+	</div>
+	{{error}}<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+html,body{
+			margin: 0;
+			padding: 0;
+		}
+		.index1{
+			color: orange;
+			background-image: url(../images/1.jpg);
+			width: 100%;height: 100%;
+			position: fixed;
+			text-align: center;
+		}
+		.index2{
+			float: unset;
+
+		}
+		.event_manage{
+			color: white;
+			font-size: 30px;
+			background-image: url(../images/2.jpg);
+			width: 100%;height: 100%;
+			position: fixed;
+			text-align: center;
+		}
