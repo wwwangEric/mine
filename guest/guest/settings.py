@@ -25,7 +25,12 @@ SECRET_KEY = '^ix&vi6yjc#)!%wt7n49a_g*-27=$7dcxr$dmz8^b0x8#*o-5%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'testserver',
+    '127.0.0.1',
+    'localhost',
+    # '*',
+]
 
 
 # Application definition
@@ -83,9 +88,9 @@ DATABASES = {
         'NAME': 'guest', 
         'USER': 'root',
         'PASSWORD': '123456',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        # },
     }
 }
 
